@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addCustomerAction } from './store/customerReducer'
 import { removeCustomerAction } from './store/customerReducer'
+import { fetchCustomers } from './asyncActions/customers'
 
 function App(props) {
 
@@ -19,15 +20,14 @@ function App(props) {
 
     const addCustomer = (name) => {
         const customer = {
-            name,
-            id: Date.now()
+            id: Date.now(),
+            name
         }
         dispatch(addCustomerAction(customer))
     }
 
     const removeCustomer = (customer) => {
         dispatch(removeCustomerAction(customer.id))
-
     }
 
     return (
@@ -37,13 +37,13 @@ function App(props) {
                 <button onClick={() => addCash(Number(prompt()))}>Пополнить счет</button>
                 <button onClick={() => getCash(Number(prompt()))}>Снять со счета</button>
                 <button onClick={() => addCustomer(prompt())}>Добавить клиента</button>
-                <button onClick={() => getCash(Number(prompt()))}>Удалить клиента</button>
+                <button onClick={() => dispatch(fetchCustomers())}>Добавить клиентов из базы</button>
             </div>
             {
                 customers.length > 0
                     ? <div className='customers'>
                         {customers.map(customer =>
-                            <div onClick={() => removeCustomer(customer)}>{customer.name}</div>
+                            <div className='hover' key={customer.id} onClick={() => removeCustomer(customer)}>{customer.name}</div>
                         )}
                     </div>
                     : <div className='err'>Клиенты отсутствуют!</div>
