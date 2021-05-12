@@ -31,6 +31,10 @@ function App(props) {
     }
 
     return (
+        <>
+            <div>
+                <a href='https://the-lensky.github.io/redux/' target='_blank' rel="noreferrer" >Репо</a>
+            </div>
         <div className='app'>
             <div className='cash'>{cash}</div>
             <div className='btn-container'>
@@ -49,6 +53,7 @@ function App(props) {
                     : <div className='err'>Клиенты отсутствуют!</div>
             }
         </div>
+            </>
     )
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "posts",
-  "homepage": "https://the-lensky.github.io/redux",
+  "homepage": "https://the-lensky.github.io/redux/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +23,6 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
