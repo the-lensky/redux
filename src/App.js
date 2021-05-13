@@ -33,7 +33,7 @@ function App(props) {
     return (
         <>
             <div>
-                <a href='https://the-lensky.github.io/redux/' target='_blank' rel="noreferrer" >Репо</a>
+                <a href='https://github.com/the-lensky/redux' target='_blank' rel="noreferrer" >Репо</a>
             </div>
         <div className='app'>
             <div className='cash'>{cash}</div>

@@ -57,3 +57,13 @@ button {
     font-size: 2rem;
     margin-top: 30px;
 }
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: cadetblue;
+    position: fixed;
+    top: 2rem;
+    left: 2rem
+;
+}
